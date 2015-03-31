@@ -17,6 +17,6 @@ ArrayList<String> list = new ArrayList<String>();
 list.add("hi");
 list.add("hello.jsp");
 
-myprint(list, out);
+myprint(list, (Writer)out);
 
 %>
