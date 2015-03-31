@@ -2,7 +2,7 @@
 <%@page import="java.io.*" %>
 
 <%!
-  public void myprint(ArrayList<String> list, Writer out) {
+  public void myprint(ArrayList<String> list, JspWriter out) {
     for (String s : list) {
       out.print(s+"<br />");
     }
