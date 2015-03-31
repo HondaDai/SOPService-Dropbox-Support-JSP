@@ -1,5 +1,12 @@
 <%
 
-out.println("hello.jsp");
+
+ArrayList<String> list = new ArrayList<String>();
+list.add("hi");
+list.add("hello.jsp");
+
+for (String s : list) {
+  out.print(s+"<br />");
+}
 
 %>
