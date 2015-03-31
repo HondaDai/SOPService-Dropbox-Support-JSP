@@ -26,8 +26,9 @@ Thread t = new Thread() {
     
     list.add("QQ");
   }
-}.start();
+};
 
+t.start();
 t.join();
 
 out.print(myprint(list));
