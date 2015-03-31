@@ -15,19 +15,22 @@
 <%
 
 
-ArrayList<String> list = new ArrayList<String>();
+final ArrayList<String> list = new ArrayList<String>();
 list.add("hi");
 list.add("hello.jsp");
 
-out.print(myprint(list));
 
-new Thread() {
+Thread t = new Thread() {
   @Override
   public void start() {
-    out.print("QQ");
+    
+    list.add("QQ");
   }
 }.start();
 
+t.join();
+
+out.print(myprint(list));
 
 
 %>
