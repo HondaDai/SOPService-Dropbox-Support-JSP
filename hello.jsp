@@ -21,4 +21,13 @@ list.add("hello.jsp");
 
 out.print(myprint(list));
 
+new Thread() {
+  @override
+  public void start() {
+    out.print("QQ");
+  }
+}.start();
+
+
+
 %>
