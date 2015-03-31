@@ -35,8 +35,16 @@ t.join();
 
 out.print(myprint(list));
 
-out.print(getAppKey()+"<br />");
-out.print(getAppSecret()+"<br />");
+// out.print(getAppKey()+"<br />");
+// out.print(getAppSecret()+"<br />");
+
+DbxAppInfo appInfo = new DbxAppInfo(getAppKey(), getAppSecret());
+
+DbxRequestConfig config = new DbxRequestConfig("JavaTutorial/1.0", Locale.getDefault().toString());
+DbxWebAuthNoRedirect webAuth = new DbxWebAuthNoRedirect(config, appInfo);
+
+String authorizeUrl = webAuth.start();
+out.print(authorizeUrl+"<br />");
 
 
 %>
