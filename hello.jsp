@@ -40,8 +40,8 @@ out.print(myprint(list));
 
 DbxAppInfo appInfo = new DbxAppInfo(getAppKey(), getAppSecret());
 
-DbxRequestConfig config = new DbxRequestConfig("JavaTutorial/1.0", Locale.getDefault().toString());
-DbxWebAuthNoRedirect webAuth = new DbxWebAuthNoRedirect(config, appInfo);
+DbxRequestConfig dbxConfig = new DbxRequestConfig("JavaTutorial/1.0", Locale.getDefault().toString());
+DbxWebAuthNoRedirect webAuth = new DbxWebAuthNoRedirect(dbxConfig, appInfo);
 
 String authorizeUrl = webAuth.start();
 out.print(authorizeUrl+"<br />");
