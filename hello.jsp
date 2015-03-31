@@ -1,4 +1,5 @@
-<%@page import="java.util.ArrayList" %>
+<%@page import="java.util.*" %>
+<%@page import="java.io.*" %>
 
 <%!
   public void print(ArrayList<String> list, Writer out) {
