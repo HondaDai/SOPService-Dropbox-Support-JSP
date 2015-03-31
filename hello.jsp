@@ -1,6 +1,7 @@
 <%@page import="java.util.*" %>
 <%@page import="java.io.*" %>
 <%@page import="com.dropbox.core.*" %>
+<%@include file="./dropbox-config.jsp" %>
 
 <%!
   public String myprint(ArrayList<String> list) {
@@ -33,6 +34,9 @@ t.start();
 t.join();
 
 out.print(myprint(list));
+
+out.print(getAppKey()+"<br />");
+out.print(getAppSecret()+"<br />");
 
 
 %>
