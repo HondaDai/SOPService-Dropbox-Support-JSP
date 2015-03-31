@@ -2,11 +2,11 @@
 <%@page import="java.io.*" %>
 
 <%!
-  public void myprint(ArrayList<String> list, JspWriter out) {
+  public void myprint(ArrayList<String> list, Writer out) {
     for (String s : list) {
-      out.print(s+"<br />");
+      out.println(s+"<br />");
     }
-    out.print("done");
+    out.println("done");
   }
 %>
 
